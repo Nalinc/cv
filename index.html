@@ -2,10 +2,32 @@
 <html>
 <head>
 	<title>Nalin's Curriculum Vitae</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<header>
+		<input type="checkbox" value="selected" id="cv-menu" class="toggle-input">
+		<div  role="toggle" class="toggle-content">
+			<span>
+				HTML
+				<i class="fa fa-html5"></i>
+			</span>
+			<span>
+				PDF
+				<i class="fa fa-file-pdf-o"></i>
+			</span>
+			<span>
+				Markdown
+				<i class="fa fa-file-o"></i>
+			</span>
+		</div>
+		<label for="cv-menu" class="toggle-label">
+			<i class="fa fa-bars"></i>
+		</label>
+
+	</header>
 	<section class="profile-wrapper">
 		<div class="profile container row" >
 			<div class="col-xs-12 profile-header">

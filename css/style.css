@@ -13,7 +13,6 @@ html, body {
 
 body {
  	font:16px/24px 'Lato', sans-serif;
-	background:#fff !important;
 	font-weight: 400;
 	text-align:center;
 	text-rendering: optimizeLegibility;
@@ -31,6 +30,48 @@ a, li { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 .wow { visibility: hidden; }
 img { display:block; height:auto; max-width:100%; vertical-align:top; ms-interpolation-mode:bicubic; opacity:1.0; width: auto\9;}
 
+header{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+header .toggle-label i.fa{
+    color: #000;
+    float: left;
+    margin: 3px 20px;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+header .toggle-label {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+header .toggle-content {
+    background-color: #000;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+}
+header .toggle-content span{
+    margin: 0 20px;
+    cursor: pointer;    
+}
+header .toggle-input {
+  display: none;
+}
+header .toggle-input:not(checked) ~ .toggle-content {
+  display: none;
+}
+header .toggle-input:checked ~ .toggle-content {
+  display: block;
+}
+header .toggle-input:checked ~ .toggle-label i{
+  color: #fff;
+}
+
 
 /**** LINKS ****/
 a {
@@ -47,12 +88,16 @@ h1.title {
     font-size: 1.667em;
 }
 .profile-wrapper{
-    height: 100%;
     width: 100%;
     border: 1px solid green;
     overflow: hidden;
     margin: 0 auto;
     max-width: 768px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 50px;
+    right: 0;
 }
 .profile{
 	text-align:justify;
@@ -70,10 +115,10 @@ h1.title {
 .profile.container{
 	font-size: 12px;
 	font-weight: bold;
-	width: 102%;
+	width: 100%;
 	margin: 0 auto;
 	padding-top: 70px;
-	background-color: #f5f5f5;
+	background-color: #fff;
 	border: 1px solid #d7d7d7;
 }
 @media print{
@@ -85,7 +130,7 @@ h1.title {
     max-height: 1110px!important;
     max-width: 1024px;
     -webkit-print-color-adjust: exact;	
-    background-color: #f5f5f5!important;
+    background-color: #fff!important;
     overflow-y: auto;
 }
 a{
@@ -124,6 +169,7 @@ a[href]:after {
     vertical-align: top;    */
 	padding: 10px;
     margin-bottom: 5px;
+    background-color: #fff;
 }
 .profile-work{
 	padding-bottom: 20px;
