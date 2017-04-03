@@ -122,6 +122,12 @@ h1.title {
 	border: 1px solid #d7d7d7;
 }
 @media print{
+header{
+    display: none;
+}    
+.profile-wrapper{
+    position: static;
+}
 .profile.container{
     border: 1px solid #d7d7d7;
     width: 770px;
@@ -131,7 +137,7 @@ h1.title {
     max-width: 1024px;
     -webkit-print-color-adjust: exact;	
     background-color: #fff!important;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 a{
     text-decoration: none;
