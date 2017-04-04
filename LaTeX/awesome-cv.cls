@@ -360,8 +360,8 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{2mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{3mm}
+\newcommand{\acvSectionContentTopSkip}{3mm}
 
 
 %-------------------------------------------------------------------------------
@@ -563,10 +563,26 @@
 
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cvpublications}[3]{%
-  {\entrytitlestyle{#1} \hfill}
+\newcommand*{\cvpublications}[4]{%
+  \vspace{-2.0mm}
+  {\entrytitlestyle{#1} \hfill \entrylocationstyle{#2}}
   \linebreak[1]
-  \entrypositionstyle{#2} \hfill \entrylocationstyle{#3}
+  \entrypositionstyle{#3} \hfill \entrydatestyle{#4}
+}
+
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cvprojects}[1]{%
+  \vspace{4.0mm}
+  \descriptionstyle{#1}
+  \vspace{4.0mm}
+}
+
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cvactivities}[1]{%
+  \vspace{4.0mm}
+  \descriptionstyle{#1}
 }
 
 % Define an environment for cvsubentry
