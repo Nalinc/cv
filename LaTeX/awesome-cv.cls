@@ -563,11 +563,29 @@
 
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cveducation}[4]{%
+  \vspace{-2.0mm}
+  {\entrytitlestyle{#1} \hfill \entrylocationstyle{#2}}
+  \linebreak[1]
+  {\entrypositionstyle{#3} \hfill \entrydatestyle{#4}}
+}
+
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cvexperience}[4]{%
+  \vspace{-2.0mm}
+  {\entrytitlestyle{#1} \hfill \entrylocationstyle{#2}}
+  \linebreak[1]
+  {\entrypositionstyle{#3} \hfill \entrydatestyle{#4}}
+}
+
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cvpublications}[4]{%
   \vspace{-2.0mm}
   {\entrytitlestyle{#1} \hfill \entrylocationstyle{#2}}
   \linebreak[1]
-  \entrypositionstyle{#3} \hfill \entrydatestyle{#4}
+  {\entrypositionstyle{#3} \hfill \entrydatestyle{#4}}
 }
 
 % Define an entry of cv information
