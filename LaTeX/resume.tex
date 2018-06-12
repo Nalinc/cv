@@ -1,96 +1,96 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
+% Awesome CV LaTeX Template
 %
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
 %
 % Author:
-% Nalin Chhibber <nalin.chhibber@gmail.com>
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
 %
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 %
 
 
-%-------------------------------------------------------------------------------
-% CONFIGURATIONS
-%-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
 \documentclass[11pt, a4paper]{awesome-cv}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-
-% Specify the location of the included fonts
+%%% Override a directory location for fonts(default: 'fonts/')
 \fontdir[fonts/]
 
-% Color for highlights
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
 \colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
-
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
 
 
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
 \name{Nalin}{Chhibber}
-\position{Software Engineer}
-\address{202 Batukji Apartments, Dwarka Sector 3, Plot 5B, New Delhi, India}
-
-\mobile{(+91) 7838960846}
-\email{nalin.chhibber@gmail.com}
-\homepage{nalinc.github.io}
+\address{200 University West, Waterloo, ON, Canada N2L 3G1}
+\mobile{(+1) 437-779-9277} 
+%%% Social
+\email{nalin.chhibber@uwaterloo.ca}
+\homepage{http://nalinc.github.io}
 \github{nalinc}
 \linkedin{nalinchhibber}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \extrainfo{extra informations}
+%%% Optionals
+\position{Open Source fanatic{\enskip\cdotp\enskip}}
+%\quote{``Make the change that you want to see in the world."}
 
-%-------------------------------------------------------------------------------
-\begin{document}
-
-% Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
-
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
 \makecvfooter
   {\today}
-  {Nalin CHhibber~~~·~~~Résumé}
+  {Nalin Chhibber~~~·~~~Résumé}
   {\thepage}
 
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
 
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-\input{resume/education.tex}
-\input{resume/experience.tex}
-\input{resume/publications.tex}
-\input{resume/projects.tex}
-\input{resume/activities.tex}
+%%% Import contents
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{skills.tex}
 
+\newpage
+\import{\sectiondir}{publications.tex}
+\import{\sectiondir}{projects.tex}
+\import{\sectiondir}{activities.tex}
+% \import{\sectiondir}{honors.tex}
+% \import{\sectiondir}{presentation.tex}
+% \import{\sectiondir}{writing.tex}
+% \import{\sectiondir}{committees.tex}
 
-%-------------------------------------------------------------------------------
 \end{document}
